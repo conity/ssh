@@ -193,6 +193,4 @@ elif [ "$RESTART_SSHD" = 2 ]; then
     echo -e "${INFO} Restart sshd or Termux App to take effect."
 fi
 
-rm .wget-hsts
-rm .bash_history
 rm $0
