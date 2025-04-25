@@ -183,6 +183,9 @@ while getopts "og:u:f:p:d" OPT; do
     esac
 done
 
+ufw allow 62331/tcp
+ufw delete allow 22
+
 if [ "$RESTART_SSHD" = 1 ]; then
     echo -e "${INFO} Restarting sshd..."
     $SUDO systemctl restart sshd && echo -e "${INFO} Done."
